@@ -4,10 +4,13 @@ const Step = (props) => {
     return (
         <div className="step-button">
             <p>
-                Krok: <input value={props.step} />
+                Krok:{" "}
+                <input
+                    type="number"
+                    onChange={(e) => props.updateStep(e)}
+                    value={props.step}
+                />
             </p>
-            <button onClick={() => props.updateStep("add")}>+</button>
-            <button onClick={() => props.updateStep("subtract")}>-</button>
         </div>
     );
 };

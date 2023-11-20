@@ -17,11 +17,13 @@ const Counter = (props) => {
             setCounter(0);
         }
     };
-    const updateStep = (val) => {
-        if (val === "add") {
-            setStep(step + 1);
+    const updateStep = (e) => {
+        const newStep = parseInt(e.target.value);
+        console.log(newStep);
+        if (newStep <= 0) {
+            setStep(1);
         } else {
-            setStep(step - 1);
+            setStep(newStep);
         }
     };
 
